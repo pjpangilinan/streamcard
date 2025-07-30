@@ -131,6 +131,10 @@ st.markdown("""
     .card-group:hover>.big-card:nth-child(8) {
         transform: translate(75%, 16%) rotate(24deg);
     }
+    
+    .card-group:hover>.big-card:nth-child(8) {
+        transform: translate(75%, -16%) rotate(24deg);
+    }
 
     .card-group:hover>.little-card:nth-child(1) {
         transform: translate(200%, -160%) rotate(-15deg);
@@ -146,6 +150,10 @@ st.markdown("""
 
     .card-group:hover>.little-card:nth-child(7) {
         transform: translate(-280%, 140%) rotate(-15deg);
+    }
+
+    .card-group:hover>.little-card:nth-child(9) {
+        transform: translate(-280%, -140%) rotate(-15deg);
     }
 
     a.fill-div {
