@@ -14,10 +14,10 @@ import streamlit.components.v1 as components
 
 # ---------------- CSS ----------------
 
-st.markdown(f"""
+st.markdown("""
 <style>
     .card-groups {
-        background-color: rgb(0, 0, 0);
+        /*  background-color: rgb(0, 0, 0); */
         margin: 0px;
         height: 80vh;
         width: 100%;
