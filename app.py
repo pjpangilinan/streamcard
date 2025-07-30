@@ -14,7 +14,7 @@ import streamlit.components.v1 as components
 
 # ---------------- CSS ----------------
 
-st.markdown("""
+st.markdown(f"""
 <style>
     .card-groups {
         /* background-color: rgb(0, 0, 0); */
@@ -151,7 +151,7 @@ st.markdown("""
         width: 100%;
         text-decoration: none;
     }
-</style>
+</style>""", unsafe_allow_html=True)
 
 # ------------------------------------------------------------
 #
@@ -159,7 +159,7 @@ st.markdown("""
 #
 # ------------------------------------------------------------
 
-st.markdown("""<div class="card-groups">
+st.markdown(f"""<div class="card-groups">
     <div class="card-group" data-index="0" data-status="active">
         <div class="little-card card">
         </div>
@@ -182,4 +182,4 @@ st.markdown("""<div class="card-groups">
         <a id="link" href="https://www.linkedin.com/in/hasiow/" class="fill-div"></a>
         </div>
     </div>
-</div>"")
+</div>""", unsafe_allow_html=True)
