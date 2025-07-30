@@ -190,5 +190,10 @@ st.markdown(f"""<div class="card-groups">
         <div class="big-card card">
         <a id="link" href="https://www.linkedin.com/in/hasiow/" class="fill-div"></a>
         </div>
+        <div class="big-card card">
+        <a id="link" href="https://github.com/TomJohnH" class="fill-div"></a>
+        </div>
+        <div class="little-card card">
+        </div>
     </div>
 </div>""", unsafe_allow_html=True)
