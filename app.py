@@ -90,6 +90,11 @@ st.markdown("""
         transform: translate(10%, 3%) rotate(5deg);
     }
     
+    .big-card:nth-child(10) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image1.png");
+        background-size: contain;
+        transform: translate(10%, 3%) rotate(5deg);
+    }
     
     .little-card:nth-child(1) {
         background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small1.jpg");
@@ -104,6 +109,10 @@ st.markdown("""
     }
     
     .little-card:nth-child(7) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small4.jpg");
+    }
+
+    .little-card:nth-child(9) {
         background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small4.jpg");
     }
     
