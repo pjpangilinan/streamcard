@@ -18,53 +18,58 @@ import streamlit.components.v1 as components
 st.markdown("""
 <style>
     .card-groups {
+        /* background-color: rgb(0, 0, 0); */
         margin: 0px;
         height: 80vh;
         width: 100%;
         display: grid;
         place-items: center;
-        position: relative;
+    
     }
-
+    
     .card-groups,
     .card-group,
     .card {
         aspect-ratio: 5 / 7;
     }
-
-    .card-group {
-        position: relative;
-        width: 60vmin;
-        height: 80vmin;
+    
+    
+    .card-group,
+    .big-card {
+        width: 30vmin;
+    
     }
-
+    
+    .card-group {
+        position: absolute;
+        transition: transform 400ms ease;
+    
+    }
+    
     .card {
         background-color: rgba(255, 255, 255, 0.05);
         position: absolute;
-        width: 100%;
-        height: 100%;
         transition: transform 800ms cubic-bezier(.05, .43, .25, .95);
+    
         background-position: center;
         background-size: cover;
-        border-radius: 1vmin;
-        z-index: 1;
+    
     }
-
+    
     .big-card {
-        z-index: 2;
+        border-radius: 1vmin;
+    
     }
-
+    
     .little-card {
         width: 12vmin;
-        height: 16vmin;
         border-radius: 2vmin;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
-        z-index: 0;
     }
-
+    
     .big-card:nth-child(2) {
         background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image4.png");
         transform: translateX(-10%) rotate(-1deg);
