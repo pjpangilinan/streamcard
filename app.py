@@ -4,7 +4,192 @@ import streamlit.components.v1 as components
 # idea & html/css code from
 # https://codepen.io/Hyperplexed/pen/zYWdYoo
 
-# adjusted for streamlit by TomJohn :-)
+# adjusted for streamlit by TomJohn :-)import streamlit as st
+import streamlit.components.v1 as components
+
+# ------------------------------------------------------------
+#
+#                  Visual settings and functions
+#
+# ------------------------------------------------------------
+
+# ---------------- CSS ----------------
+
+st.markdown("""
+<style>
+    .card-groups {
+        margin: 0px;
+        height: 80vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        position: relative;
+    }
+
+    .card-groups,
+    .card-group,
+    .card {
+        aspect-ratio: 5 / 7;
+    }
+
+    .card-group {
+        position: relative;
+        width: 60vmin;
+        height: 80vmin;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 800ms cubic-bezier(.05, .43, .25, .95);
+        background-position: center;
+        background-size: cover;
+        border-radius: 1vmin;
+        z-index: 1;
+    }
+
+    .big-card {
+        z-index: 2;
+    }
+
+    .little-card {
+        width: 12vmin;
+        height: 16vmin;
+        border-radius: 2vmin;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+
+    .big-card:nth-child(2) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image4.png");
+        transform: translateX(-10%) rotate(-1deg);
+    }
+
+    .big-card:nth-child(4) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image3.png");
+        transform: rotate(2deg);
+    }
+
+    .big-card:nth-child(6) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image2.png");
+        transform: translateX(-6%) rotate(-3deg);
+    }
+
+    .big-card:nth-child(8) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image1.png");
+        background-size: contain;
+        transform: translate(10%, 3%) rotate(5deg);
+    }
+
+    .big-card:nth-child(10) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/image1.png");
+        background-size: contain;
+        transform: translate(10%, 3%) rotate(5deg);
+    }
+
+    .little-card:nth-child(1) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small1.jpg");
+    }
+
+    .little-card:nth-child(3) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small2.jpg");
+    }
+
+    .little-card:nth-child(5) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small3.jpg");
+    }
+
+    .little-card:nth-child(7) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small4.jpg");
+    }
+
+    .little-card:nth-child(9) {
+        background-image: url("https://raw.githubusercontent.com/TomJohnH/streamlit-cv/main/images/small4.jpg");
+    }
+
+    .card-group:hover>.card {
+        box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+    }
+
+    .card-group:hover>.big-card:nth-child(2) {
+        transform: translate(-75%, 16%) rotate(-24deg);
+    }
+
+    .card-group:hover>.big-card:nth-child(4) {
+        transform: translate(-25%, 8%) rotate(-8deg);
+    }
+
+    .card-group:hover>.big-card:nth-child(6) {
+        transform: translate(25%, 8%) rotate(8deg);
+    }
+
+    .card-group:hover>.big-card:nth-child(8) {
+        transform: translate(75%, 16%) rotate(24deg);
+    }
+
+    .card-group:hover>.little-card:nth-child(1) {
+        transform: translate(200%, -160%) rotate(-15deg);
+    }
+
+    .card-group:hover>.little-card:nth-child(3) {
+        transform: translate(160%, 170%) rotate(15deg);
+    }
+
+    .card-group:hover>.little-card:nth-child(5) {
+        transform: translate(-200%, -170%) rotate(15deg);
+    }
+
+    .card-group:hover>.little-card:nth-child(7) {
+        transform: translate(-280%, 140%) rotate(-15deg);
+    }
+
+    a.fill-div {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# ------------------------------------------------------------
+#
+#                        front-end
+#
+# ------------------------------------------------------------
+
+st.markdown(f"""
+<div class="card-groups">
+    <div class="card-group" data-index="0" data-status="active">
+        <div class="little-card card"></div>
+        <div class="big-card card">
+            <a class="link fill-div" href="https://discuss.streamlit.io/u/tomjohn/summary"></a>
+        </div>
+        <div class="little-card card"></div>
+        <div class="big-card card">
+            <a class="link fill-div" href="https://stackoverflow.com/users/5627791/tomjohn"></a>
+        </div>
+        <div class="little-card card"></div>
+        <div class="big-card card">
+            <a class="link fill-div" href="https://github.com/TomJohnH"></a>
+        </div>
+        <div class="little-card card"></div>
+        <div class="big-card card">
+            <a class="link fill-div" href="https://www.linkedin.com/in/hasiow/"></a>
+        </div>
+        <div class="big-card card">
+            <a class="link fill-div" href="https://github.com/TomJohnH"></a>
+        </div>
+        <div class="little-card card"></div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 
 # ------------------------------------------------------------
 #
