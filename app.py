@@ -17,7 +17,7 @@ import streamlit.components.v1 as components
 st.markdown(f"""
 <style>
     .card-groups {
-        /* background-color: rgb(0, 0, 0); */
+        background-color: rgb(0, 0, 0);
         margin: 0px;
         height: 80vh;
         width: 100%;
